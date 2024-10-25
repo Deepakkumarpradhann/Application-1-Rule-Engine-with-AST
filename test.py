@@ -50,7 +50,7 @@ if __name__ == "__main__":
         "age": 35,
         "department": "Sales",
         "salary": 60000,
-        "experience": 6
+        "experience": 3
     }
     test_evaluate_rule(combined_rule_id, data)
 
