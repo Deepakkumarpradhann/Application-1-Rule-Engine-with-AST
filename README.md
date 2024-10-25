@@ -36,7 +36,7 @@ Create the second rule: bash curl -X POST http://127.0.0.1:5000/create_rule -H "
 
 Combine the rules (replace 1 and 2 with the actual rule IDs from steps 1 and 2): bash curl -X POST http://127.0.0.1:5000/combine_rules -H "Content-Type: application/json" -d '{"rule_ids": [1, 2]}'
 
-Evaluate the combined rule (replace 3 with the actual combined rule ID from step 3): bash curl -X POST http://127.0.0.1:5000/evaluate_rule -H "Content-Type: application/json" -d '{ "rule_id": 3, "data": { "age": 35, "department": "Sales", "salary": 60000, "experience": 6 } }'
+Evaluate the combined rule (replace 3 with the actual combined rule ID from step 3): bash curl -X POST http://127.0.0.1:5000/evaluate_rule -H "Content-Type: application/json" -d '{ "rule_id": 3, "data": { "age": 35, "department": "Sales", "salary": 60000, "experience": 3 } }'
 
 Modify a rule (replace 1 with the actual rule ID you want to modify): bash curl -X POST http://127.0.0.1:5000/modify_rule -H "Content-Type: application/json" -d '{ "rule_id": 1, "new_rule_string": "age > 40 AND department = '''HR'''" }'
 
@@ -68,7 +68,7 @@ data = {
     "age": 35,
     "department": "Sales",
     "salary": 60000,
-    "experience": 6
+    "experience": 3
 }
 test_evaluate_rule(combined_rule_id, data)
 
